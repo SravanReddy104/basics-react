@@ -1,0 +1,11 @@
+.app {
+    height: 200px;
+    border: 1px solid red;
+    width: 280px;
+    overflow-x: scroll;
+}
+
+
+/* .app::-webkit-scrollbar {
+    display: none;
+} */

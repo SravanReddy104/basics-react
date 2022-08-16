@@ -1,17 +1,40 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDom from "react-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import Home from "./Home";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// import React from 'react'
+// import { BrowserRouter, Route, Routes } from "react-router-dom";
+import CustomRoutes from "./CustomRoutes";
+
+import ErrorBoundary from "./ErrorBoundary";
+import Hello from "./Hello.js"
+
+
+function ErrorFallback({error,resetErrorBoundary}) {
+  return (
+    <div role="alert">
+      <p>Something went wrong:</p>
+      <pre>{error.message}</pre>
+      <button onClick={resetErrorBoundary}>Try again</button>
+    </div>
+  )
+}
+function App() {
+  // const  handle = async ()=>{
+  //   await createUserWithEmailAndPassword(auth,"sravani@gmail.com","sravan").then((response)=>{console.log(response)}).catch((err)=>alert(err))
+  // }
+  return (
+    <div>
+      <CustomRoutes />
+      <Home />
+<ErrorBoundary>
+<Hello/>
+</ErrorBoundary>
+  
+      
+       
+    </div>
+  );
+}
+
+ReactDom.render(<App />, document.getElementById("root"));

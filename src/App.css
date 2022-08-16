@@ -1,38 +1,39 @@
-.App {
-  text-align: center;
+.register_icon {
+    background: white;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+    color: rgb(9, 25, 9);
+    width: 280px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.register_icon>input::placeholder {
+    color: gray;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    left: 15px;
+    top: 2px;
+    bottom: 2px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.register_icon>input {
+    margin: 5px 0;
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-size: 16px;
+    background: transparent;
+    overflow: hidden;
+    width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* .register_icon>.muiSvgIcon-root {
+    font-size: 2rem !important;
+    position: relative;
+    left: 20px;
+    margin-right: 100px;
+} */
